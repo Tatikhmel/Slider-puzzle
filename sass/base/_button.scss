@@ -1,0 +1,65 @@
+.button {
+  width: 600px;
+
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(42%, -740%);
+}
+
+#button {
+  transform: translate(0, 130%);
+  @include image($width: 100%, $height: 20px, $radius: 10px);
+
+  margin: 10px;
+  color: $color-text;
+  font-family: "Fredoka One", cursive;
+  text-shadow: 0.2px 0.1px 0.1px #000;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-puzzles;
+  border: 1px solid $color-text;
+  text-align: center;
+
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  padding: 2rem 1em;
+  transform-style: preserve-3d;
+
+  &:active {
+    background-color: $color-puzzle-additional;
+    color: $color-background;
+  }
+
+  &::before {
+    content: "";
+
+    @include position(
+      $position: absolute,
+      $left: 0,
+      $top: 0,
+      $right: 0,
+      $bottom: 0
+    );
+
+    @include image($width: 100%, $height: 60%, $radius: inherit);
+
+    background: $color-puzzle-additional;
+    box-shadow: 0 0 0 1px $color-text, 0 0.1em 0 0 $color-text-dark;
+    transform: translate3d(0, 2.3em, -0.5em);
+  }
+}
+
+.shuffleButton {
+  width: 260px !important;
+}
+
+.row_col_length {
+  width: 60px !important;
+  transform: translate(-760%, 1220%) !important;
+}

@@ -1,2 +1,3 @@
 # Slider-puzzle
-Slider Puzzle
+
+Slider Puzzle is an app that challenges users to rearrange a collection of scrambled images into a cohesive picture. The game is comprised of a grid of tiles featuring images that have been randomly placed on the game board. Players must slide the tiles around the board to rearrange the images and eventually form a complete picture. As the player progresses in difficulty, the number of tiles increases, along with the complexity of the puzzles. The game features an intuitive user interface providing players with the tools necessary to create and play the puzzles. Slider Puzzle offers an enjoyable challenge for puzzle lovers of all ages.

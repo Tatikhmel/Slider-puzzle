@@ -1,0 +1,158 @@
+@import "abstracts/constants";
+@import "abstracts/mixin";
+@import "abstracts/placeholder";
+
+%close-line {
+  content: "";
+  background-color: $color-text;
+  position: absolute;
+  @include image($width: 20px, $height: 4px, $radius: 2px);
+  display: inline-block;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.doc {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.137);
+}
+
+body {
+  background-color: $color-background;
+  background: url(/img/background.png) no-repeat;
+  background-position: 44% 45%;
+  font-family: "Fredoka One", cursive;
+  color: $color-text;
+  text-shadow: 0.2px 0.1px 0.1px #000;
+}
+
+.root {
+  transform: translate(0%, 20%);
+  @include image($width: 475px, $height: 600px, $radius: 0);
+  margin: auto;
+  position: relative;
+}
+
+.cube {
+  z-index: -1;
+  @extend %transition;
+  border-radius: 20%;
+  color: $color-text;
+
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-puzzles;
+  border: 1px solid $color-text;
+  text-align: center;
+
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  padding: 1rem 1em;
+  transform-style: preserve-3d;
+
+  &::before {
+    content: "";
+
+    @include position(
+      $position: absolute,
+      $left: 0,
+      $top: 0,
+      $right: 0,
+      $bottom: 0
+    );
+    @include image($width: 100%, $height: 100%, $radius: inherit);
+
+    background: $color-puzzle-additional;
+    box-shadow: 0 0 0 1px $color-text, 0 0.1em 0 0 $color-text-dark;
+    transform: translate3d(0, 0.4em, -0.4em);
+  }
+}
+
+.blank_space {
+  display: none;
+}
+
+.win_announce,
+.start_banner,
+.result_banner {
+  position: absolute;
+  top: 13%;
+  left: -4%;
+
+  z-index: 1;
+  @include shadow;
+  @include image($width: 530px, $height: 88%, $radius: 5%);
+  background-color: $color-background-dark;
+}
+
+.banner_message,
+.win_message {
+  position: absolute;
+  z-index: 2;
+  color: $color-puzzle-additional;
+  text-shadow: 2px 1px 1px $color-text-dark;
+  text-align: center;
+  font-size: 35px;
+  margin: 55% 0% 0 5%;
+}
+
+.timer {
+  position: absolute;
+  color: $color-background-additional;
+  top: 230%;
+  left: 20%;
+  font-size: 20px;
+}
+
+.count_moves {
+  color: $color-background-additional;
+  position: absolute;
+  top: 230%;
+  left: -24%;
+  font-size: 20px;
+}
+
+.close_banner {
+  position: absolute;
+  top: 23.5%;
+  left: 62.5%;
+  z-index: 5;
+
+  &::before {
+    @extend %close-line;
+    top: 3%;
+    left: 94%;
+    transform: rotate(-45deg);
+  }
+  &::after {
+    @extend %close-line;
+    top: 3%;
+    left: 94%;
+    transform: rotate(45deg);
+  }
+}
+.score_table {
+  border-collapse: collapse;
+  z-index: 6;
+  background-color: $color-background;
+  position: absolute;
+
+  top: 25%;
+  left: 38.2%;
+  width: 475px;
+  height: 475px;
+}
+
+tr {
+  color: $color-text;
+  text-align: center;
+  font-size: 17px;
+}

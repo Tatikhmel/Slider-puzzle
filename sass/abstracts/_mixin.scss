@@ -1,0 +1,76 @@
+@mixin font(
+  $size,
+  $weight,
+  $transform,
+  $decoration,
+  $text-align,
+  $height,
+  $color,
+  $style: normal
+) {
+  font-size: $size;
+  text-transform: $transform;
+  text-decoration: $decoration;
+  text-align: $text-align;
+  font-weight: $weight;
+  line-height: $height;
+  font-style: $style;
+  color: $color;
+}
+
+@mixin shadow {
+  -webkit-box-shadow: 9px 11px 52px 4px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 9px 11px 52px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 9px 11px 52px 4px rgba(0, 0, 0, 0.4);
+}
+
+@mixin button(
+  $color_background,
+  $color,
+  $transform,
+  $size,
+  $line_height,
+  $cursor: pointer
+) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+  border: $border;
+  background-color: $color_background;
+  color: $color;
+  text-transform: $transform;
+  font-size: $size;
+  line-height: $line_height;
+  cursor: $cursor;
+}
+
+@mixin image($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+@mixin position($position, $left, $top, $right, $bottom) {
+  position: $position;
+  left: $left;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin grid($width) {
+  display: grid;
+  justify-content: space-between;
+  > * {
+    grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
+  }
+}
