@@ -23,8 +23,7 @@
 
 body {
   background-color: $color-background;
-  background: url(/img/background.png) no-repeat;
-  background-position: 44% 45%;
+  background-size: cover;
   font-family: "Fredoka One", cursive;
   color: $color-text;
   text-shadow: 0.2px 0.1px 0.1px #000;
@@ -101,19 +100,19 @@ body {
   text-shadow: 2px 1px 1px $color-text-dark;
   text-align: center;
   font-size: 35px;
-  margin: 55% 0% 0 5%;
+  margin: 60% 0% 0 5%;
 }
 
 .timer {
   position: absolute;
-  color: $color-background-additional;
+  color: $color-puzzles;
   top: 230%;
   left: 20%;
   font-size: 20px;
 }
 
 .count_moves {
-  color: $color-background-additional;
+  color: $color-puzzles;
   position: absolute;
   top: 230%;
   left: -24%;
@@ -139,14 +138,15 @@ body {
     transform: rotate(45deg);
   }
 }
+
 .score_table {
   border-collapse: collapse;
-  z-index: 6;
+  z-index: 10;
   background-color: $color-background;
   position: absolute;
 
   top: 25%;
-  left: 38.2%;
+  left: 38%;
   width: 475px;
   height: 475px;
 }
@@ -156,3 +156,4 @@ tr {
   text-align: center;
   font-size: 17px;
 }
+
