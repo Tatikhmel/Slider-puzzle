@@ -32,7 +32,7 @@
   transform-style: preserve-3d; }
   #button:active {
     background-color: #82c7a5;
-    color: #ceada8; }
+    color: #df7f70; }
   #button::before {
     content: "";
     position: absolute;
@@ -52,7 +52,7 @@
 
 .row_col_length {
   width: 60px !important;
-  transform: translate(-760%, 1220%) !important; }
+  transform: translate(-755%, 1220%) !important; }
 
 .cube {
   transition: all 0.3s ease-out; }
@@ -76,9 +76,8 @@
   background-color: rgba(0, 0, 0, 0.137); }
 
 body {
-  background-color: #ceada8;
-  background: url(/img/background.png) no-repeat;
-  background-position: 44% 45%;
+  background-color: #df7f70;
+  background-size: cover;
   font-family: "Fredoka One", cursive;
   color: #48776b;
   text-shadow: 0.2px 0.1px 0.1px #000; }
@@ -137,7 +136,7 @@ body {
   width: 530px;
   height: 88%;
   border-radius: 5%;
-  background-color: rgba(181, 125, 117, 0.87); }
+  background-color: rgba(197, 80, 71, 0.87); }
 
 .banner_message,
 .win_message {
@@ -147,17 +146,17 @@ body {
   text-shadow: 2px 1px 1px #2c4c40;
   text-align: center;
   font-size: 35px;
-  margin: 55% 0% 0 5%; }
+  margin: 60% 0% 0 5%; }
 
 .timer {
   position: absolute;
-  color: rgba(226, 125, 109, 0.87);
+  color: #b6e4d5;
   top: 230%;
   left: 20%;
   font-size: 20px; }
 
 .count_moves {
-  color: rgba(226, 125, 109, 0.87);
+  color: #b6e4d5;
   position: absolute;
   top: 230%;
   left: -24%;
@@ -179,11 +178,11 @@ body {
 
 .score_table {
   border-collapse: collapse;
-  z-index: 6;
-  background-color: #ceada8;
+  z-index: 10;
+  background-color: #df7f70;
   position: absolute;
   top: 25%;
-  left: 38.2%;
+  left: 38%;
   width: 475px;
   height: 475px; }
 
@@ -193,3 +192,4 @@ tr {
   font-size: 17px; }
 
 /*# sourceMappingURL=style.css.map */
+
